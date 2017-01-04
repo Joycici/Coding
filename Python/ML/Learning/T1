@@ -1,0 +1,53 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+
+"""
+This is a Machine Learning test
+"""
+
+"""
+__author__='joy'
+__version__='1.0'
+"""
+
+import numpy as np
+import matplotlib
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+import time
+from scipy.optimize import leastsq
+import scipy.optimize as opt
+import scipy
+import matplotlib.pyplot as plot
+from scipy.stats import norm, poisson
+from scipy.interpolate import BarycentricInterpolator
+from scipy.interpolate import CubicSpline
+import math
+if __name__=="__main__":
+    # 5. 绘图
+    # mu = 2
+    # sigma = 1
+    # x = np.linspace(mu - 3 * sigma,mu + 3,50)
+    # y = np.exp(-(x - mu)**2 / (2*sigma**2))/(math.sqrt(2*math.pi)*sigma)
+    # print x.shape
+    # print 'x= \n',x
+    # print y.shape
+    # print 'y= \n',y
+    # plot.plot(x,y,'ro-',linewidth=2)
+    # # plot.plot(x,y,'r-',x,y,'go',linewidth=2,markersize=8)
+    # plot.grid(True)
+    # plot.show()
+
+    # Bar
+    matplotlib.rcParams['font.sans-serif'] = [u'SimHei']#黑体 FangSong/KaiTi
+    matplotlib.rcParams['axes.unicode_minus'] = False
+    x = np.arange(0,10,0.1)
+    y = np.sin(x)
+    plot.bar(x,y,width=0.04,linewidth=0.2)
+    plot.plot(x,y,'r--',linewidth=2)
+    plot.title(u'Sin曲线')
+    plot.xlabel('x')
+    plot.ylabel('y')
+    plot.grid()
+    plot.show()
+
